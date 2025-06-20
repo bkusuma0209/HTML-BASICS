@@ -1,0 +1,54 @@
+boby 
+{
+    align-items: center;
+    font-family: "Inter",sans-serif;
+    background-color: rgb(199, 185, 185);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+form{
+    background-color: rgb(24, 22, 24);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+}
+fieldset{
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: rgb(204, 202, 204);
+}
+h1
+{
+    text-align: center;
+    color:rgb(14, 78, 134);
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2em;
+    letter-spacing: -0.5px;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color:rgba(110, 14, 200, 0.792);
+    font-size: 0.95;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+   border-color: blanchedalmond;
+   box-shadow: 0 0 0 3px rgb(72, 72, 68);
+   outline: none;
+}
