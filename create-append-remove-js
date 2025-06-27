@@ -1,0 +1,39 @@
+let aish=document.createElement("P");
+//aish.textContent="I'm Kusuma";
+aish.innerHTML="Memory 1 Tera Byte";
+aish.style.color="blue";
+aish.style.fontsize="20px";
+document.getElementById("vasi").appendChild(aish)
+setTimeout(()=>{
+    let Chiriii =document.getElementsByClassName("list")[2];
+    if(Chiriii){
+        Chiriii.remove();
+    }
+},2000);
+let newHeading = document.createElement("h2");
+newHeading.innerHTML = "This is a new heading added by JavaScript!!";
+newHeading.style.color = "purple";
+newHeading.style.fontsize = "24px";
+document.body.appendChild(newHeading);
+setTimeout(()=>{
+    let newText = document.createElement("P");
+    newText.textContent = "This text is added after 3 seconds!";
+    newText.style.color = "green";
+    document.body.appendChild(newText);
+},3000);
+let tagText = document.createElement("p");
+tagText.textContent = "This Text is appended to the tag.";
+tagText.style.color ="pink";
+document.getElementById("vasi").appendChild(tagText);
+
+let myList = document.createElement("ul");
+for (let i=1;i<=3;i++){
+    let item = document.createElement("li");
+    listitems.textContent="Item"+${i};
+    listitems.style.color="blue";
+    listitems.style.fontsize="20px";
+
+
+    myList.appendChild(li);
+    document.body.getElementById(myList);
+}

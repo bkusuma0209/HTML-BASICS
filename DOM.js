@@ -31,11 +31,9 @@ function changeBackground() {
     }
     }
 function changetext(){
-    document.getElementById("clg").innerHTML="CMRCET", "MLRD";
+    document.getElementById("clg").innerHTML="CMRCET", "CMREC";
     document.getElementById("clg").style.backgroundColor= "coral";
     document.getElementById("clg").style.backgroundColor= "white";
     document.getElementById("clg").style.fontSize= "30px";
     document.getElementById("clg").style.color= "blue";
-    
-    
 }
