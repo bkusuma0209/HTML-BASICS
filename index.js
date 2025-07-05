@@ -30,7 +30,7 @@ calculator(5,10,(a,b)=>{
     console.log(a+b);
 });
  */
- /* console.log("one");
+/* console.log("one");
  console.log("two");
  const hello = ()=>{
     console.log("Hello World");
@@ -40,7 +40,7 @@ calculator(5,10,(a,b)=>{
  console.log("four"); */
 
  //nested for loops example
- /* for(let i = 0; i < 5; i++)
+/* for(let i = 0; i < 5; i++)
  {
     let str = "";
     for(let j = 0; j < 5; j++)
@@ -67,7 +67,6 @@ calculator(5,10,(a,b)=>{
         }
     },5000);
  } */
-
 //console.log("Hello World");
 //function sayHello(){
 //console.log("Hello from sayHello function");
@@ -81,21 +80,16 @@ calculator(5,10,(a,b)=>{
 //},5000);
 //console.log("three");
 //console.log("four");
-
 // a callback is a function that is passed as an argument to another function 
 //and is executed after the completion of that function.
-
 //callback example
 /* function sum(a,b){
     console.log(a+b);
 }
-
 function calculator(a,b,ds){
     ds(a,b);
 }
 calculator(5,10,sum);
-
-
 calculator(5,10,(a,b)=>{
     console.log(a+b);
 });
@@ -108,7 +102,6 @@ calculator(5,10,(a,b)=>{
  setTimeout(hello,5000);
  console.log("three");
  console.log("four"); */
-
  //nested for loops example
  /* for(let i = 0; i < 5; i++)
  {
@@ -137,51 +130,77 @@ calculator(5,10,(a,b)=>{
         }
     },5000);
  } */
-
- const myPromise = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        const success = false;
-        //simulate success or failure
-        if (success){
-            resolve("Data fetched successfullly");
-        } else{
-            reject("Error fetching data");
-        }
-    },2000);
- });
- myPromise
- .then((data)=>{
-    console.log("promise resolved with data:",data);
- })
- .catch((error)=>{
-    console.log("Promise rejected with error:",error);
- }) 
-
-let promise= new Promise((resolve,reject)=>{
-    console.log("Iam a promise");
-    if(1<0){
-        resolve(123);
+/* const getpromise= () =>{
+    return new Promise((resolve,reject)) => {
+        console.log("I am a promise");
+        reject("Something went wrong");
     }
-    reject("Something went wrong");
 }
-); 
+let result = getpromise();
+result 
+      .then(data =>{
+        console.log(data);
+      })
+      result .catch(error =>{
+        console.error("Error occured:",error);
+      }) */
 
-function getData(dataid){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() =>{
-            console.log("Fetching data for id:",dataid);
-            resolve("success");
-        },2000);
-    });
-}
-let result=getData(123);
-result;
-getData(101)
-    .then(result=>{
-        console.log("First fetch:", result);
-        return getData(102);
-    })
-    .then(result=>{
-        console.log("Second fetch:", result);
-        return getData(103);
-    })
+// promise chgaining
+
+/* function asyncFunc1(){
+            return new Promise((resolve,reject) =>{
+                setTimeout(() =>{
+                    console.log("data1");
+                    resolve("success");
+                },2000);
+            });
+        }
+        function asyncFunc2(){
+            return new Promise((resolve,reject) =>{
+                setTimeout(() =>{
+                    console.log("data2");
+                    resolve("success");
+                },4000)
+            });
+        }
+        console.log("fetching data 1...");
+        let p1=asyncFunc1();
+        p1.then((data)=>{
+            console.log("Data fetched:",data);
+            console.log("fetching data 2...");
+            let p2=asyncFunc2();
+            p2.then((data)=>{
+                console.log("Data fetched:",data);
+            });
+        });
+
+function getData(id){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Fetching data for id:",id);
+                    resolve(id);
+                }, 1000)
+            });
+        }
+
+        async function fetchData(){
+            try {
+                const data1 = await getData(101);
+                console.log("First fetch:",data1);
+                const data2 = await getData(102);
+                console.log("Second fetch:",data2);
+                const data3 = await getData(103);
+                console.log("Second fetch:",data3);
+            } catch (error) {
+                console.log("Errorr occurred:",error);
+            }
+        }
+
+        async function getnextData(){
+            console.log("getting data 1.....");
+            await getData(1);
+            console.log("getting data 2.....");
+            await getData(2);
+            console.log("getting data 3.....");
+            await getData(3);
+        }  */
