@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quiz App with Timer and Leaderboard</title>
+<link rel="stylesheet" href="Quizz.css" />
+</head>
+<body>
+
+<div class="quiz-container">
+  <div id="timer">Time: 60s</div>
+  <div class="question" id="question">Question appears here</div>
+  <ul class="options" id="options"></ul>
+  <button id="nextBtn" onclick="nextQuestion()" style="display:none;">Next</button>
+  <div id="result"></div>
+</div>
+
+<div id="leaderboard">
+  <h2>Leaderboard</h2>
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Score</th></tr>
+    </thead>
+    <tbody id="leaderboardBody"></tbody>
+  </table>
+</div>
+
+<script src="Quizz.js"></script>
+</body>
+</html>
